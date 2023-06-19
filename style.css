@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue:hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+html,
+body {
+    width:100%;
+    height:100%;
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+}
+.container {
+    display: flex;
+    width:50%;
+    height:auto;
+    background-color: var(--white);
+    border-radius: 0.7rem;
+}
+.perfume-img {
+    flex:1;
+}
+.mobile-img {
+    display: none;
+}
+.desktop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+.description {
+    flex:1;
+    padding:2.5em;
+}
+.description * {
+    color:var(--dark-grayish-blue);
+}
+.description-heading {
+    font-size: medium;
+    letter-spacing: 0.5rem;
+}
+.description > h1 {
+    margin: 0.6em 0;
+    width:85%;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 3rem;
+    color:black;
+}
+.description > p {
+    line-height: 2rem;
+    font-size: 1.2rem;
+    width: 90%;
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:65%;
+    margin:2.5em 0;
+}
+.current {
+    font-family: 'Fraunces', sans-serif;
+    font-size:2.3rem;
+    color:var(--dark-cyan);
+}
+.description > button {
+    width:100%;
+    padding:1.2em;
+    background-color: var(--dark-cyan);
+    border-style: none;
+    border-radius: 0.7rem;
+    color:var(--white);
+    font-size:1.2rem;
+    font-weight:500;
+    cursor: pointer;
+}
+.description > button > img {
+    width:6%;
+    margin:0 0.2rem;
+}
+
+@media screen and (max-width:660px) {
+    body {
+        align-items: flex-start;
+    }
+    .container {
+        flex-direction: column;
+        width: 70%;
+    }
+    .desktop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.7rem 0.7rem 0 0;
+    }
+    .description-heading {
+        font-size:1rem;
+    }
+    .description > h1 {
+        font-size: 2.5rem;
+    }
+    .description > p {
+        font-size:1.1rem;
+    }
+    .price {
+        width:65%;
+        margin: 2rem 0;
+    }
+    .current {
+        font-size:2.5rem;
+    }
+    .past {
+        font-size:1rem;
+    }
+}
